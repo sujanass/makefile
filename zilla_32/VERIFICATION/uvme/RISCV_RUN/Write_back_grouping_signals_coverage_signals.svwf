@@ -1,0 +1,121 @@
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+#
+# Groups
+#
+if {[catch {group get -using [list R_type_ALU]}]} {
+set createdGroup([list R_type_ALU]) 1
+catch {group new -name R_type_ALU -overlay 0}
+}
+if {[catch {group get -using [list I_type_JALR]}]} {
+set createdGroup([list I_type_JALR]) 1
+catch {group new -name I_type_JALR -overlay 0}
+}
+if {[catch {group get -using [list UJ]}]} {
+set createdGroup([list UJ]) 1
+catch {group new -name UJ -overlay 0}
+}
+if {[catch {group get -using [list Mem_reg_mux]}]} {
+set createdGroup([list Mem_reg_mux]) 1
+catch {group new -name Mem_reg_mux -overlay 0}
+}
+if {[catch {group get -using [list U Type en signals]}]} {
+set createdGroup([list U Type en signals]) 1
+catch {group new -name {U Type en signals} -overlay 0}
+}
+if {[info exists createdGroup([list R_type_ALU])]} {
+group using R_type_ALU
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.sub_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.add_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.sll_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.slt_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.xor_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.srl_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.sra_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.or_en}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.and_en}]} ]
+}
+
+if {[info exists createdGroup([list I_type_JALR])]} {
+group using I_type_JALR
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.jalr_en}]} ]
+}
+
+if {[info exists createdGroup([list UJ])]} {
+group using UJ
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.jal_en}]} ]
+}
+
+if {[info exists createdGroup([list Mem_reg_mux])]} {
+group using Mem_reg_mux
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {riscv_top_tb.DUT.mem_reg_mux.in1[31:0]}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.mem_reg_mux.in2[31:0]}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.mem_reg_mux.out[31:0]}]} ] \
+    [subst  {[format {riscv_top_tb.DUT.mem_reg_mux.sel}]} ]
+}
+
+if {[info exists createdGroup([list U Type en signals])]} {
+group using {U Type en signals}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {riscv_top_tb.DUT.alu_inst.lui_en}]} ]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.alu_inst.data_in_1[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.alu_inst.data_in_2[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.alu_inst.data_out[31:0]}]}
+	} ]]
+
+set groupId0 [waveform add -groups R_type_ALU]
+
+
+set groupId0 [waveform add -groups I_type_JALR]
+
+
+set groupId0 [waveform add -groups UJ]
+
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.reg_file_inst.wr_data_en}]}
+	} ]]
+
+set groupId0 [waveform add -groups Mem_reg_mux]
+
+
+set groupId0 [waveform add -groups {{U Type en signals}}]
+
+
+waveform xview limits 0 2000ns

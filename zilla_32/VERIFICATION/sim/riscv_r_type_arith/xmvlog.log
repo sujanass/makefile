@@ -1,0 +1,73 @@
+TOOL:	xmvlog(64)	20.09-s009: Started on Feb 21, 2023 at 21:18:31 IST
+xmvlog
+    -f /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/compile_list.f
+        -INCDIR /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme
+        -INCDIR /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/define_lib.svh
+        /tools/cadence_march2021/XCELIUM2009/tools.lnx86/methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/riscv_intf.svh
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/decode_intf.svh
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/write_back_interface.svh
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/ldst_out_intf.svh
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/riscv_top_tb.svh
+    -f /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/scripts/xmvlog.arg
+        -NOCOPYRIGHT
+        -MESSAGES
+        -SV
+    -SV
+    -INCDIR /tools/cadence_march2021/XCELIUM2009/tools.lnx86/methodology/UVM/CDNS-1.1d/sv/src
+    +define+UVM_NO_DPI
+    +define+UVM_REPORT_DISABLE_FILE_LINE
+    -WORK WorkLib
+
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/define_lib.svh
+file: /tools/cadence_march2021/XCELIUM2009/tools.lnx86/methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv
+	package WorkLib.uvm_pkg
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/riscv_intf.svh
+	interface WorkLib.riscv_intf
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/decode_intf.svh
+	interface WorkLib.decode_intf
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/write_back_interface.svh
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+                                                                                                                |
+xmvlog: *W,NOCMIC (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/write_back_interface.svh,22|112): error-prone block comment nested within block comment [2.3(IEEE)].
+	interface WorkLib.write_back_interface
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/ldst_out_intf.svh
+	interface WorkLib.ldst_out_intf
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh
+                        $fgets(line,file_handle);
+                             |
+xmvlog: *W,NOSYST (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_AGENTS/agent_dm/agent_dm.svh,73|29): System function '$fgets' invoked as a task. Return value will be ignored.
+(`include file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_AGENTS/agent_dm/agent_dm.svh line 73, file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh line 36)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+                                                                                                                |
+xmvlog: *W,NOCMIC (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_AGENTS/agent_base/riscv_seq_item.svh,22|112): error-prone block comment nested within block comment [2.3(IEEE)].
+(`include file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_AGENTS/agent_base/riscv_seq_item.svh line 22, file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh line 72)
+        /*begin
+         |
+xmvlog: *W,NOCMIC (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_SCOREBOARD/ldst_out_sb.svh,241|9): error-prone block comment nested within block comment [2.3(IEEE)].
+(`include file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_SCOREBOARD/ldst_out_sb.svh line 241, file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh line 90)
+        std::randomize(m_num_tx) with {m_num_tx inside {[50:100]};};
+                      |
+xmvlog: *W,FUNTSK (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/riscv_env.svh,114|22): function called as a task without void'().
+(`include file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/riscv_env.svh line 114, file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_PACKAGE/riscv_package.svh line 92)
+          `uvm_field_int(instruction        , UVM_ALL_ON)            
+                                                        |
+xmvlog: *W,ENUMERR (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_AGENTS/agent_im/im_seq_item.svh,418|56): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	package WorkLib.riscv_package
+		errors: 0, warnings: 5
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/riscv_top_tb.svh
+                obj1.randomize();
+                             |
+xmvlog: *W,FUNTSK (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/riscv_top_tb.svh,361|29): function called as a task without void'().
+	module WorkLib.riscv_top_tb
+		errors: 0, warnings: 1
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+TOOL:	xmvlog(64)	20.09-s009: Exiting on Feb 21, 2023 at 21:18:32 IST  (total: 00:00:01)

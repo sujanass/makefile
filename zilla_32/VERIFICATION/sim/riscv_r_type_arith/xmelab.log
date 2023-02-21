@@ -1,0 +1,63 @@
+xmelab(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+xmelab: *W,COVEOP: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/scripts/cov_files/cov_cmd.cf:5 "-all" with set_expr_scoring is an expensive option as it selects all the expressions in the design. It has been deprecated and will not be supported in subsequent releases.
+    riscv_intf intf_dm (intf_i.risc_clk);
+                     |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/riscv_top_tb.svh,54|21): 2 input ports were not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/riscv_intf.svh,28): TCK
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/riscv_intf.svh,29): mem_clk
+
+     riscv_intf intf_i( risc_clk,
+                     |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/riscv_top_tb.svh,60|21): 1 input port was not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_INTERFACES/riscv_intf.svh,29): mem_clk
+
+    zpc_top_inst //zilla program control instance
+               |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,547|15): 5 input ports were not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,66): debug_mem_read_enable
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,67): debug_mem_write_enable
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,68): debug_mem_read_addr
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,69): debug_mem_write_addr
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,70): debug_mem_strobe
+
+    rem_inst
+           |
+xmelab: *W,CUVWSP (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,1130|11): 1 output port was not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2777): zero
+
+    rem_inst
+           |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,1130|11): 2 input ports were not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2772): oper1_sign
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2773): oper2_sign
+
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    .dpc_csr_i                          ({{(INSTRUCTION_WIDTH-PC_WIDTH){1'b0}},dpc_w}),
+                                         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,598|41): port sizes differ in port connection(32/20) for the instance(riscv_top_tb.DUT) .
+    .interrupt_code_in			        ({56'd0,zic_mmr_ack_id_w}		    ),//interrupt_code //from zic	
+                      			         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,728|34): port sizes differ in port connection(64/32) for the instance(riscv_top_tb.DUT) .
+    .exception_code_in			        ({56'd0,exception_id_w}			    ),//exception code
+                      			         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,730|34): port sizes differ in port connection(64/32) for the instance(riscv_top_tb.DUT) .
+    .instr_misalign_addr_in			    ({44'd0,instr_misalign_addr_w}	    ),
+                           			     |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,734|35): port sizes differ in port connection(64/32) for the instance(riscv_top_tb.DUT) .
+    .*,
+     |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,189|5): port sizes differ in port connection(16/12) for the instance(riscv_top_tb.DUT.csr_top_inst)  for child port:  dbg_mode_csr_addr_i.
+    .dpc_o                   (dpc_o                 ),
+                                  |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,430|34): port sizes differ in port connection(20/32) for the instance(riscv_top_tb.DUT.csr_top_inst) .
+    .dbg_csr_addr_i          (dbg_mode_csr_addr_i        ),
+                                                |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,432|48): port sizes differ in port connection(16/12) for the instance(riscv_top_tb.DUT.csr_top_inst) .
+xmelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+                `uvm_info(get_type_name(),$sformatf(" ================Hello test plus args===========",$time), UVM_MEDIUM)
+                                                                                                                         |
+xmelab: *W,EXFARG (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/riscv_i_type_arith.svh,61|121): Extra Argument with given format specifier.
+    logic [7:0] fifo [6:0];
+                   |
+xmelab: *W,COVMDD (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_register_file.sv,1045|19): Toggle coverage for bit, logic, reg, wire, enum and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage for enum multi-dimensional static arrays specify 'set_toggle_scoring -sv_enum enable_mda' and for other multi-dimensional static arrays, specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+xmelab: *W,OBINRGT: (File: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/uvme/RISCV_TOP/RISCV_TESTS/RISCV_ENV/RISCV_COVERAGE/ldst_coverage.svh, Line : 139): Some of the values in bin range '[0 : 4]' of bin 'WorkLib.riscv_package::ldst_coverage::\ldst_cov .FORWARD_A.forward_a' are not within the possible values that coverpoint can store. Range will be modified to '[0 : 3]'.

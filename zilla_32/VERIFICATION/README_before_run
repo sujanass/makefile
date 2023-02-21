@@ -1,0 +1,112 @@
+Zilla 32 bit environment USAGE usig oscar and other Basics 
+===================================================================
+cd VERIFICATION
+source scripts/cshrc_zilla
+
+you will be navigated to sim folder  
+pwd
+
+do the RTL compilation & simulation only here inside sim folder
+
+env
+type the env to see the list of available variables 
+observe 
+tb_dir,proj_dir
+print the project variables using 
+echo $tb_dir
+echo $proj_dir
+
+for regression set up we have anoter env variable that is 
+set reg_testfile = "$tb_dir/scripts/regression_files/testfile.lst"
+
+echo $reg_testfile
+
+
+alias uvme "cd $tb_dir/uvme/RISCV_RUN"
+alias tb_dir "cd $tb_dir"
+alias sim "cd $tb_dir/sim"
+
+set reg_testfile = "$tb_dir/scripts/regression_files/testfile.lst"
+
+===================================================================
+we are using oscar alias to clone the RTL and Test case simulation 
+
+USAGE:
+which oscar 
+
+do which oscar to see the alias of the 
+
+
+oscar --help 
+to get the list of options available 
+
+
+
+=============RTL compilation ======================================
+==> use below command if there is no RTL - it will clone the RTL and compile the RTL
+oscar TOP --git_en 
+it will clone the RTL of zilla - if you are unable to clone it then request git administrator for git repo access post that try again the above command.
+
+
+==>RTL Compilation with defines  => compile the available RTl with applied defines
+oscar TOP -v define1 define2 
+
+==>RTL compilation without defines  => compile the available RTL withouy applying any defines
+oscar TOP 
+
+
+============Test run- UVM =========================================
+oscar TEST riscv_r_type_arith --uvm_test
+replae riscv_r_type_arith with other uvm_test cases 
+
+other test cases will be aviable here 
+ll -ltr $tb_dir/uvme/RISCV_TOP/RISCV_TESTS/
+
+=>UVM test execution with seed  
+oscar TEST riscv_r_type_arith --uvm_test --seed 
+
+=>UVM test execution without seed  
+oscar TEST riscv_r_type_arith --uvm_test 
+
+============Test run C test execution==============================
+
+=>C test execution with seed and without spike run 
+oscar TEST addition --firmware --seed 
+
+=>C test execution with seed and with spike run 
+oscar TEST addition --firmware --seed --spikerun 
+
+=>C test execution without seed and without spike run 
+oscar TEST addition -firmware --seed --spikerun 
+ 
+=>C test execution without seed and with spike run 
+oscar TEST addition --firmware --spikerun 
+
+
+example 
+oscar TEST fibinocci --firmware --spikerun --seed
+===================================================================
+
+
+
+============Regression run=========================================
+oscar TEST $reg_testfile -y --xls2lst 
+===================================================================
+
+=============sim folder junk files removal commands================
+=> clean sim including RTL
+oscar SIM_DLT all 
+it will clean the sim folder including rtl compiled folder too 
+ 
+=> clean sim folder by excluding compiled rtl for reuse - no need of recompile of RTL if there is no change
+oscar SIM_DLT x_rtl 
+
+===================================================================
+ 
+
+==============Conclusion ==========================================
+
+With this single script we were able to perform RTL compilation, UVM Test execution , Regression runs. 
+
+
+===================================================================

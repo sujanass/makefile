@@ -1,0 +1,24 @@
+TEST NAME,TEST TYPE,PRIORITY,NO. OF TIMES
+riscv_r_type_arith,UVM,10,1
+riscv_r_type_shift,UVM,9,1
+riscv_i_type_shift,UVM,2,1
+riscv_i_type_jalr,UVM,3,1
+riscv_i_type_shift,UVM,4,1
+riscv_i_type_load,UVM,5,1
+riscv_sb_type,UVM,6,1
+riscv_s_type,UVM,10,1
+riscv_u_type,UVM,8,1
+riscv_uj_type,UVM,7,1
+ld_lower_imm_uns_test,UVM,10,1
+ld_upper_imm_uns_test,UVM,9,1
+ld_lower_imm_sign_test,UVM,6,1
+ld_upper_imm_sign_test,UVM,5,1
+ld_random_imm_uns_test,UVM,4,1
+ld_random_imm_sign_test,UVM,2,1
+st_lower_imm_uns_test,UVM,10,1
+st_upper_imm_uns_test,UVM,9,1
+st_random_imm_uns_test,UVM,6,1
+st_lower_imm_sign_test,UVM,5,1
+st_upper_imm_sign_test,UVM,4,1
+st_random_imm_sign_test,UVM,2,1
+riscv_load_store,UVM,2,1

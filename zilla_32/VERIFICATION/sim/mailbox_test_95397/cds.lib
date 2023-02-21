@@ -1,0 +1,2 @@
+DEFINE DesignLib ./DesignLib
+DEFINE WorkLib ./WorkLib

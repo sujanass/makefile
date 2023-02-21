@@ -1,0 +1,57 @@
+008000 : _isr_vector 
+008100 : _reset 
+0081b4 : print_chr 
+  81e4:	00008067          	ret
+0081e8 : print_str 
+  824c:	00008067          	ret
+008250 : z_puts 
+  82a4:	00008067          	ret
+0082a8 : z_convert 
+  8328:	00008067          	ret
+00832c : z_printf 
+  86bc:	00008067          	ret
+0086c0 : mailbox_send_request 
+  8720:	00008067          	ret
+008724 : mailbox_set_flag 
+  8788:	00008067          	ret
+00878c : mailbox_unset_flag 
+  87f0:	00008067          	ret
+0087f4 : mailbox_read_flag 
+  885c:	00008067          	ret
+008860 : wait_until_flag_unset 
+  88cc:	00008067          	ret
+0088d0 : mailbox_read_value 
+  8934:	00008067          	ret
+008938 : generate_random_num 
+  8988:	00008067          	ret
+00898c : generate_IRQ 
+  89c0:	00008067          	ret
+0089c4 : deassert_IRQ 
+  89f8:	00008067          	ret
+0089fc : test 
+  8a28:	00008067          	ret
+008a2c : read_exception_num 
+  8a6c:	00008067          	ret
+008a70 : generate_random 
+  8ac0:	00008067          	ret
+008ac4 : main 
+  8b14:	00008067          	ret
+008b18 : Default_Handler 
+008b1c : No_irq_handler 
+008b2c : Exception_handler_irq 
+008b3c : machine_software_irq 
+008b4c : exit 
+008b80 : register_fini 
+  8b94:	00008067          	ret
+008b98 : __call_exitprocs 
+  8c3c:	00008067          	ret
+008cbc : __libc_fini_array 
+  8d0c:	00008067          	ret
+008d10 : atexit 
+008d24 : __register_exitproc 
+  8d84:	00008067          	ret
+  8db4:	00008067          	ret
+  8dbc:	00008067          	ret
+008dc0 : _exit 
+008df0 : __errno 
+  8df8:	00008067          	ret

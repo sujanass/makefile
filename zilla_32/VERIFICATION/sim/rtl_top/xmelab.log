@@ -1,0 +1,43 @@
+xmelab(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+    zpc_top_inst //zilla program control instance
+               |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,547|15): 5 input ports were not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,66): debug_mem_read_enable
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,67): debug_mem_write_enable
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,68): debug_mem_read_addr
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,69): debug_mem_write_addr
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv,70): debug_mem_strobe
+
+    rem_inst
+           |
+xmelab: *W,CUVWSP (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,1130|11): 1 output port was not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2777): zero
+
+    rem_inst
+           |
+xmelab: *W,CUVWSI (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,1130|11): 2 input ports were not connected:
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2772): oper1_sign
+xmelab: (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv,2773): oper2_sign
+
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    .dpc_csr_i                          ({{(INSTRUCTION_WIDTH-PC_WIDTH){1'b0}},dpc_w}),
+                                         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,598|41): port sizes differ in port connection(32/20) for the instance(riscv_top) .
+    .interrupt_code_in			        ({56'd0,zic_mmr_ack_id_w}		    ),//interrupt_code //from zic	
+                      			         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,728|34): port sizes differ in port connection(64/32) for the instance(riscv_top) .
+    .exception_code_in			        ({56'd0,exception_id_w}			    ),//exception code
+                      			         |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,730|34): port sizes differ in port connection(64/32) for the instance(riscv_top) .
+    .instr_misalign_addr_in			    ({44'd0,instr_misalign_addr_w}	    ),
+                           			     |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv,734|35): port sizes differ in port connection(64/32) for the instance(riscv_top) .
+    .*,
+     |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,189|5): port sizes differ in port connection(16/12) for the instance(riscv_top.csr_top_inst)  for child port:  dbg_mode_csr_addr_i.
+    .dpc_o                   (dpc_o                 ),
+                                  |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,430|34): port sizes differ in port connection(20/32) for the instance(riscv_top.csr_top_inst) .
+    .dbg_csr_addr_i          (dbg_mode_csr_addr_i        ),
+                                                |
+xmelab: *W,CUVMPW (/home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv,432|48): port sizes differ in port connection(16/12) for the instance(riscv_top.csr_top_inst) .

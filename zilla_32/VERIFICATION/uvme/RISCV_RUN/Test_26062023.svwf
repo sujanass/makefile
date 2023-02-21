@@ -1,0 +1,81 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.risc_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.pc[19:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.zpc_top_inst.zilla_instruction_buffer_inst.z_instruction_i[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.zpc_top_inst.zilla_instruction_buffer_inst.z_instruction_o[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.opcode[6:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.func3[2:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.func7[6:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.rs1[4:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.rs2[4:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.rd[4:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.instr_decode.imm_r[31:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.exception_id_w[7:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.z_im_read_en_o}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.reg_file_inst.dp_ram_inst.regfile[31:0]}]}
+	} ]]
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.alu_inst.add_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.mem_reg_mux.out[31:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.stall_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.wb_intf.forward_a[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.DUT.forwarding_inst.forward_b[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {riscv_top_tb.wb_intf.alu_out[31:0]}]}
+	} ]]
+
+waveform xview limits 54.774ns 154.366ns

@@ -1,0 +1,438 @@
+TOOL:	xmvlog(64)	20.09-s009: Started on Feb 21, 2023 at 01:48:23 IST
+xmvlog
+    -f /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/rtl_compile_list.f
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_define.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_branch_condition_check.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_data_mem_if.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_forwarding_unit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_gpr.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_instruction_decoder.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_instruction_memory.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_ld_hazard_detect.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_ld_sd_address_gen.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_wb_mux.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_read_mux.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_register_file.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/mhpm_counter_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_ctrl.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_op_mux.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_reg_file.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zic_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/interrupt_recieve.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/priority_resolve.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zic_irg.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zilla_interrupt_control.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/z_exception_detect.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_instruction_buffer.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_pc_update.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_program_control_fsm.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/apb_slave_dmreg_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/debug_module_fsm.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dm_register_file.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dm_register_mux.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dtm_to_dm.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/jtag_apb_master_interface.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_data_register.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_instruction_register.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_tap_controller.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_tdo_mux.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/APB/RTL_SOURCE_FILES/APB_Master.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/carry_skip_48bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/carry_skip_4bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_12bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_16bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_24bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_4bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_6bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_8bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/csa_48bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/csa_96bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/full_adder.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/half_adder.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/multiplier_top.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_16x16.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_2x2.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_32x32.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_4x4.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_64x64.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_8x8.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider_32bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider_64bit.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/zilla_divider.sv
+        /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/zilla_reminder.sv
+    -f /home/vvtrainee42/sujana/PROCESSOR/zilla_32/VERIFICATION/scripts/xmvlog.arg
+        -NOCOPYRIGHT
+        -MESSAGES
+        -SV
+    -SV
+    -INCDIR /tools/cadence_march2021/XCELIUM2009/tools.lnx86/methodology/UVM/CDNS-1.1d/sv/src
+    +define+UVM_NO_DPI
+    +define+UVM_REPORT_DISABLE_FILE_LINE
+    -WORK DesignLib
+    +define+define1
+    +define+define2
+
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_define.sv
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_core_top.sv
+	module DesignLib.riscv_top
+		errors: 0, warnings: 0
+	module DesignLib.fwd
+		errors: 0, warnings: 0
+	module DesignLib.memory_read_mux
+		errors: 0, warnings: 0
+	module DesignLib.store_data
+		errors: 0, warnings: 0
+	module DesignLib.pipe
+		errors: 0, warnings: 0
+	module DesignLib.read_modify_write
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_alu.sv
+	module DesignLib.alu
+		errors: 0, warnings: 0
+	module DesignLib.add
+		errors: 0, warnings: 0
+	module DesignLib.sub
+		errors: 0, warnings: 0
+	module DesignLib.sll
+		errors: 0, warnings: 0
+	module DesignLib.xorg
+		errors: 0, warnings: 0
+	module DesignLib.srl
+		errors: 0, warnings: 0
+	module DesignLib.sra
+		errors: 0, warnings: 0
+	module DesignLib.org
+		errors: 0, warnings: 0
+	module DesignLib.andg
+		errors: 0, warnings: 0
+	module DesignLib.mult
+		errors: 0, warnings: 0
+	module DesignLib.div
+		errors: 0, warnings: 0
+	module DesignLib.rem
+		errors: 0, warnings: 0
+	module DesignLib.lui
+		errors: 0, warnings: 0
+	module DesignLib.jal
+		errors: 0, warnings: 0
+	module DesignLib.jalr
+		errors: 0, warnings: 0
+	module DesignLib.auipc
+		errors: 0, warnings: 0
+	module DesignLib.slt
+		errors: 0, warnings: 0
+	module DesignLib.rotate_left
+		errors: 0, warnings: 0
+	module DesignLib.rotate_right
+		errors: 0, warnings: 0
+	module DesignLib.cmp_eq
+		errors: 0, warnings: 0
+	module DesignLib.cmp_gteu
+		errors: 0, warnings: 0
+	module DesignLib.cmp_gte
+		errors: 0, warnings: 0
+	module DesignLib.cmp_gtu
+		errors: 0, warnings: 0
+	module DesignLib.cmp_gt
+		errors: 0, warnings: 0
+	module DesignLib.cmp_lteu
+		errors: 0, warnings: 0
+	module DesignLib.cmp_lte
+		errors: 0, warnings: 0
+	module DesignLib.cmp_ltu
+		errors: 0, warnings: 0
+	module DesignLib.cmp_ne
+		errors: 0, warnings: 0
+	module DesignLib.cmp_lt
+		errors: 0, warnings: 0
+	module DesignLib.mvi
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_branch_condition_check.sv
+	module DesignLib.branch_condition_check
+		errors: 0, warnings: 0
+	module DesignLib.beq
+		errors: 0, warnings: 0
+	module DesignLib.bne
+		errors: 0, warnings: 0
+	module DesignLib.blt
+		errors: 0, warnings: 0
+	module DesignLib.bge
+		errors: 0, warnings: 0
+	module DesignLib.bltu
+		errors: 0, warnings: 0
+	module DesignLib.bgeu
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_data_mem_if.sv
+	module DesignLib.data_mem
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_forwarding_unit.sv
+	module DesignLib.forwarding
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_gpr.sv
+	module DesignLib.reg_file
+		errors: 0, warnings: 0
+	module DesignLib.dp_ram
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_instruction_decoder.sv
+	module DesignLib.instr_decode
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_instruction_memory.sv
+	module DesignLib.instruction_memory
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_ld_hazard_detect.sv
+	module DesignLib.load_hazard_ctrl
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_ld_sd_address_gen.sv
+	module DesignLib.addr_gen
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/CORE/RTL_SOURCE_FILES/CORE_RTL/zilla_wb_mux.sv
+	module DesignLib.mux2x1
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_top.sv
+	module DesignLib.csr_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_read_mux.sv
+	module DesignLib.csr_read_mux
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/csr_register_file.sv
+	module DesignLib.csr_register_file
+		errors: 0, warnings: 0
+	module DesignLib.data_mem_max_addr
+		errors: 0, warnings: 0
+	module DesignLib.zic_base_csr
+		errors: 0, warnings: 0
+	module DesignLib.mintstatus_csr
+		errors: 0, warnings: 0
+	module DesignLib.minstret_csr
+		errors: 0, warnings: 0
+	module DesignLib.mcycle_csr
+		errors: 0, warnings: 0
+	module DesignLib.mcounter_inhibit_csr
+		errors: 0, warnings: 0
+	module DesignLib.mtvec_csr
+		errors: 0, warnings: 0
+	module DesignLib.mepc_csr
+		errors: 0, warnings: 0
+	module DesignLib.mie_csr
+		errors: 0, warnings: 0
+	module DesignLib.mip_csr
+		errors: 0, warnings: 0
+	module DesignLib.mtval_csr
+		errors: 0, warnings: 0
+	module DesignLib.mcause_csr
+		errors: 0, warnings: 0
+	module DesignLib.mscratch_csr
+		errors: 0, warnings: 0
+	module DesignLib.mstatus_csr
+		errors: 0, warnings: 0
+	module DesignLib.mhardid_csr
+		errors: 0, warnings: 0
+	module DesignLib.mimpid_csr
+		errors: 0, warnings: 0
+	module DesignLib.mvendorid_csr
+		errors: 0, warnings: 0
+	module DesignLib.march_csr
+		errors: 0, warnings: 0
+	module DesignLib.misa_csr
+		errors: 0, warnings: 0
+	module DesignLib.dcsr
+		errors: 0, warnings: 0
+	module DesignLib.dpc
+		errors: 0, warnings: 0
+	module DesignLib.uart_reset_csr
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/CSR/RTL_SOURCE_FILES/mhpm_counter_top.sv
+	module DesignLib.mhpm_counter_top
+		errors: 0, warnings: 0
+	module DesignLib.mhpm_counter_csr
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_top.sv
+	module DesignLib.zic_mmr_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_ctrl.sv
+	module DesignLib.zic_mmr_ctrl
+		errors: 0, warnings: 0
+	module DesignLib.irq_ctrl
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_op_mux.sv
+	module DesignLib.zic_mmr_op_mux
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/ZIC_MEM_MAP/RTL_SOURCE_FILES/zic_mmr_reg_file.sv
+	module DesignLib.zic_mmr_reg_file
+		errors: 0, warnings: 0
+	module DesignLib.zic_mmr_ack
+		errors: 0, warnings: 0
+	module DesignLib.zic_mmr_cfg
+		errors: 0, warnings: 0
+	module DesignLib.zic_mmr_info
+		errors: 0, warnings: 0
+	module DesignLib.zic_mmr_eoi
+		errors: 0, warnings: 0
+	module DesignLib.zic_mmr_nxtp
+		errors: 0, warnings: 0
+	module DesignLib.wdt_mmr_csr
+		errors: 0, warnings: 0
+	module DesignLib.WDT_REG_FILE
+		errors: 0, warnings: 0
+	module DesignLib.WDT_COUNTER
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zic_top.sv
+	module DesignLib.zic_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/interrupt_recieve.sv
+	module DesignLib.interrupt_recieve
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/priority_resolve.sv
+	module DesignLib.priority_resolve
+		errors: 0, warnings: 0
+	module DesignLib.lvl_pr_compare
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zic_irg.sv
+	module DesignLib.zic_irg
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/INTERRUPT_CONTROL/RTL_SOURCE_FILES/zilla_interrupt_control.sv
+	module DesignLib.zilla_interrupt_control
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/z_exception_detect.sv
+	module DesignLib.z_exception_detect
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zpc_top.sv
+	module DesignLib.zpc_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_instruction_buffer.sv
+	module DesignLib.zilla_instruction_buffer
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_pc_update.sv
+	module DesignLib.zilla_pc_update
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/PROGRAM_CONTROL/RTL_SOURCE_FILES/zilla_program_control_fsm.sv
+	module DesignLib.zilla_program_control_fsm
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/apb_slave_dmreg_top.sv
+	module DesignLib.apb_slave_dmreg_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/debug_module_fsm.sv
+	module DesignLib.debug_module_fsm
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dm_register_file.sv
+	module DesignLib.dm_register_file
+		errors: 0, warnings: 0
+	module DesignLib.abstractcs
+		errors: 0, warnings: 0
+	module DesignLib.command
+		errors: 0, warnings: 0
+	module DesignLib.dmcontrol
+		errors: 0, warnings: 0
+	module DesignLib.hartinfo
+		errors: 0, warnings: 0
+	module DesignLib.dmstatus
+		errors: 0, warnings: 0
+	module DesignLib.data_reg01
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dm_register_mux.sv
+	module DesignLib.dm_register_mux
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/dtm_to_dm.sv
+	module DesignLib.dtm_to_dm
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DEBUG/RTL/jtag_apb_master_interface.sv
+	module DesignLib.jtag_apb_master_interface
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_data_register.sv
+	module DesignLib.jtag_data_register
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_instruction_register.sv
+	module DesignLib.jtag_instruction_register
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_tap_controller.sv
+	module DesignLib.jtag_tap_controller
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_tdo_mux.sv
+	module DesignLib.jtag_tdo_mux
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/JTAG/RTL_SOURCE_CODES/jtag_top.sv
+	module DesignLib.jtag_top
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/APB/RTL_SOURCE_FILES/APB_Master.sv
+	module DesignLib.apb_master
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/carry_skip_48bit.sv
+	module DesignLib.carry_skip_48bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/carry_skip_4bit.sv
+	module DesignLib.carry_skip_4bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_12bit.sv
+	module DesignLib.cla_adder_12bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_16bit.sv
+	module DesignLib.cla_adder_16bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_24bit.sv
+	module DesignLib.cla_adder_24bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_4bit.sv
+	module DesignLib.cla_adder_4bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_6bit.sv
+	module DesignLib.cla_adder_6bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/cla_adder_8bit.sv
+	module DesignLib.cla_adder_8bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/csa_48bit.sv
+	module DesignLib.csa_48bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/csa_96bit.sv
+	module DesignLib.csa_96bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/full_adder.sv
+	module DesignLib.full_adder
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/half_adder.sv
+	module DesignLib.half_adder
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/multiplier_top.sv
+	module DesignLib.z_multiplier
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_16x16.sv
+	module DesignLib.vedic_16x16
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_2x2.sv
+	module DesignLib.vedic_2x2
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_32x32.sv
+	module DesignLib.vedic_32x32
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_4x4.sv
+	module DesignLib.vedic_4x4
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_64x64.sv
+	module DesignLib.vedic_64x64
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/MULTIPLIER/RTL_SOURCE_FILES/vedic_8x8.sv
+	module DesignLib.vedic_8x8
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider_32bit.sv
+	module DesignLib.riscv_divider_32bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider_64bit.sv
+	module DesignLib.riscv_divider_64bit
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/riscv_divider.sv
+	module DesignLib.riscv_divider
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/zilla_divider.sv
+	module DesignLib.zilla_divider
+		errors: 0, warnings: 0
+file: /home/vvtrainee42/sujana/PROCESSOR/zilla_32/RTL/IP/DIVIDER/RTL_SOURCE_FILES/zilla_reminder.sv
+	module DesignLib.zilla_reminder
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	20.09-s009: Exiting on Feb 21, 2023 at 01:48:23 IST  (total: 00:00:00)

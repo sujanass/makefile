@@ -1,0 +1,368 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                              (_reset)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+                              /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o) (exit)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o) (__call_exitprocs)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o) (atexit)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o) (__register_exitproc)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o) (_exit)
+/opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+                              /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o) (__errno)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+INST_MEM         0x0000000000008000 0x0000000000040000 axrl
+MAILBOX1         0x0000000000048000 0x0000000000000004 axrwl
+MAILBOX2         0x0000000000048004 0x0000000000000004 axrwl
+PRINT_MAILBOX    0x0000000000048008 0x0000000000000100 axrwl
+MAIL_FLG1        0x0000000000048108 0x0000000000000004 axrwl
+MAIL_FLG2        0x000000000004810c 0x0000000000000004 axrwl
+DATA_MEM         0x0000000000048110 0x000000000003fee0 axrwl
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+LOAD /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a
+LOAD /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/sdk/lib/libisa-lib.a
+LOAD /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/libgcc.a
+START GROUP
+LOAD /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a
+LOAD /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a
+END GROUP
+LOAD /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/libgcc.a
+                [!provide]                        PROVIDE (__boot_address = 0x8100)
+                0x0000000000048110                PROVIDE (__data_address = ORIGIN (DATA_MEM))
+                0x0000000000048000                PROVIDE (__mailbox1__ = ORIGIN (MAILBOX1))
+                [!provide]                        PROVIDE (__mailbox2__ = ORIGIN (MAILBOX2))
+                0x0000000000048008                PROVIDE (__mailbox_print__ = ORIGIN (PRINT_MAILBOX))
+                [!provide]                        PROVIDE (__mailbox1_flag__ = ORIGIN (MAIL_FLG1))
+                [!provide]                        PROVIDE (__mailbox2_flag__ = ORIGIN (MAIL_FLG2))
+                [!provide]                        PROVIDE (__mailbox1_len__ = LENGTH (MAILBOX1))
+                [!provide]                        PROVIDE (__mailbox2_len__ = LENGTH (MAILBOX2))
+                0x0000000000000100                PROVIDE (__mailbox_print_len__ = LENGTH (PRINT_MAILBOX))
+                [!provide]                        PROVIDE (__mailbox_flag_len__ = LENGTH (MAIL_FLG1))
+                [!provide]                        PROVIDE (__mailbox_flag_len__ = LENGTH (MAIL_FLG2))
+
+.vectors        0x0000000000008000      0x100
+                [!provide]                        PROVIDE (_start_vector = .)
+ *(.isr_vector)
+ .isr_vector    0x0000000000008000      0x100 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                0x0000000000008000                _isr_vector
+                [!provide]                        PROVIDE (end = .)
+
+.init           0x0000000000008100       0xb4
+ *(SORT_NONE(.init))
+ .init          0x0000000000008100       0xb4 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                0x0000000000008100                _reset
+ *(.text.start)
+
+.text           0x00000000000081b4      0xc48
+ *(.text*)
+ .text          0x00000000000081b4      0x964 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+                0x00000000000081b4                print_chr
+                0x00000000000081e8                print_str
+                0x0000000000008250                z_puts
+                0x00000000000082a8                z_convert
+                0x000000000000832c                z_printf
+                0x00000000000086c0                mailbox_send_request
+                0x0000000000008724                mailbox_set_flag
+                0x000000000000878c                mailbox_unset_flag
+                0x00000000000087f4                mailbox_read_flag
+                0x0000000000008860                wait_until_flag_unset
+                0x00000000000088d0                mailbox_read_value
+                0x0000000000008938                generate_random_num
+                0x000000000000898c                generate_IRQ
+                0x00000000000089c4                deassert_IRQ
+                0x00000000000089fc                test
+                0x0000000000008a2c                read_exception_num
+                0x0000000000008a70                generate_random
+                0x0000000000008ac4                main
+ .text          0x0000000000008b18       0x34 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                0x0000000000008b18                irq_38_handler
+                0x0000000000008b18                irq_18_handler
+                0x0000000000008b18                irq_30_handler
+                0x0000000000008b18                irq_24_handler
+                0x0000000000008b18                machine_timer_irq
+                0x0000000000008b18                irq_5_handler
+                0x0000000000008b18                irq_6_handler
+                0x0000000000008b18                irq_47_handler
+                0x0000000000008b18                irq_44_handler
+                0x0000000000008b18                irq_14_handler
+                0x0000000000008b18                irq_27_handler
+                0x0000000000008b18                irq_8_handler
+                0x0000000000008b18                irq_46_handler
+                0x0000000000008b18                irq_7_handler
+                0x0000000000008b18                irq_41_handler
+                0x0000000000008b18                irq_2_handler
+                0x0000000000008b18                irq_26_handler
+                0x0000000000008b18                irq_42_handler
+                0x0000000000008b18                irq_19_handler
+                0x0000000000008b18                irq_22_handler
+                0x0000000000008b18                irq_16_handler
+                0x0000000000008b18                irq_45_handler
+                0x0000000000008b18                irq_23_handler
+                0x0000000000008b18                irq_21_handler
+                0x0000000000008b18                Default_Handler
+                0x0000000000008b18                irq_0_handler
+                0x0000000000008b18                irq_1_handler
+                0x0000000000008b18                irq_36_handler
+                0x0000000000008b18                irq_3_handler
+                0x0000000000008b18                irq_20_handler
+                0x0000000000008b18                irq_32_handler
+                0x0000000000008b18                irq_35_handler
+                0x0000000000008b18                irq_13_handler
+                0x0000000000008b18                irq_40_handler
+                0x0000000000008b18                irq_37_handler
+                0x0000000000008b18                irq_17_handler
+                0x0000000000008b18                irq_25_handler
+                0x0000000000008b18                irq_39_handler
+                0x0000000000008b18                irq_33_handler
+                0x0000000000008b18                irq_12_handler
+                0x0000000000008b18                irq_10_handler
+                0x0000000000008b18                irq_9_handler
+                0x0000000000008b18                irq_29_handler
+                0x0000000000008b18                irq_28_handler
+                0x0000000000008b18                irq_11_handler
+                0x0000000000008b18                irq_15_handler
+                0x0000000000008b18                irq_43_handler
+                0x0000000000008b18                irq_31_handler
+                0x0000000000008b18                irq_34_handler
+                0x0000000000008b18                irq_4_handler
+                0x0000000000008b18                machine_external_irq
+                0x0000000000008b1c                No_irq_handler
+                0x0000000000008b2c                Exception_handler_irq
+                0x0000000000008b3c                machine_software_irq
+ .text          0x0000000000008b4c        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+ .text.exit     0x0000000000008b4c       0x34 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+                0x0000000000008b4c                exit
+ .text          0x0000000000008b80        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x0000000000008b80        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x0000000000008b80       0x18 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x0000000000008b98      0x124 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0000000000008b98                __call_exitprocs
+ .text          0x0000000000008cbc        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x0000000000008cbc       0x54 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+                0x0000000000008cbc                __libc_fini_array
+ .text          0x0000000000008d10        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000000008d10       0x14 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+                0x0000000000008d10                atexit
+ .text          0x0000000000008d24        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x0000000000008d24       0x9c /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+                0x0000000000008d24                __register_exitproc
+ .text          0x0000000000008dc0        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+ .text._exit    0x0000000000008dc0       0x30 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+                0x0000000000008dc0                _exit
+ .text          0x0000000000008df0        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+ .text.__errno  0x0000000000008df0        0xc /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+                0x0000000000008df0                __errno
+                0x0000000000008dfc                _end_text = .
+                0x0000000000008e00                . = ALIGN (0x8)
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.results
+ *(.results)
+
+.rodata         0x0000000000048110       0x96
+ *(.rodata .rodata.*)
+ .rodata        0x0000000000048110       0x96 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+
+.rela.dyn       0x00000000000481a8        0x0
+ .rela.text     0x00000000000481a8        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .rela.isr_vector
+                0x00000000000481a8        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .rela.init     0x00000000000481a8        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .rela.text.startup.register_fini
+                0x00000000000481a8        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .rela.text.__libc_fini_array
+                0x00000000000481a8        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+
+.rodata1
+ *(.rodata1)
+                0x00000000000481a8                . = ALIGN (0x8)
+
+.sdata2
+ *(.sdata2 .sdata2.*)
+                0x00000000000481a8                . = ALIGN (0x8)
+
+.sbss2
+ *(.sbss2 .sbss2.*)
+                0x00000000000481a8                . = ALIGN (0x8)
+                0x00000000000481a8                _stored_data = .
+
+.data           0x00000000000481a8      0x440
+                0x00000000000481a8                _start_data = .
+ *(.data*)
+ .data          0x00000000000481a8       0x11 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .data          0x00000000000481b9        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+ .data          0x00000000000481b9        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x00000000000481b9        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ *fill*         0x00000000000481b9        0x7 
+ .data.impure_data
+                0x00000000000481c0      0x428 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+ .data          0x00000000000485e8        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+                0x0000000000048de8                //_global_pointer = (. + 0x800)
+                0x00000000000485e8                . = ALIGN (0x8)
+                0x00000000000485e8                _end_data = .
+
+.init_array.00000
+                0x00000000000485e8        0x4
+ .init_array.00000
+                0x00000000000485e8        0x4 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x00000000000485f0                . = ALIGN (0x8)
+
+.data1
+ *(.data1)
+                0x00000000000485f0                . = ALIGN (0x8)
+
+.sdata          0x00000000000485ec        0x8
+                0x00000000000485ec                __SDATA_BEGIN__ = .
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+ .srodata._global_impure_ptr
+                0x00000000000485ec        0x4 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+                0x00000000000485ec                _global_impure_ptr
+ *(.sdata .sdata.*)
+ .sdata._impure_ptr
+                0x00000000000485f0        0x4 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+                0x00000000000485f0                _impure_ptr
+                0x00000000000485f8                . = ALIGN (0x8)
+                0x00000000000485f8                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x00000000000485f8                . = .
+                0x00000000000485f8                _start_bss = .
+
+.sbss           0x00000000000485f4        0x4
+ *(.dynsbss)
+ *(.sbss .sbss.*)
+ .sbss          0x00000000000485f4        0x4 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+                0x00000000000485f4                error_cnt
+ *(.scommon)
+                0x00000000000485f8                . = ALIGN (0x8)
+
+.bss            0x00000000000485f8       0x38
+ *(.dynbss)
+ *(.bss .bss.*)
+ .bss           0x00000000000485f8       0x38 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .bss           0x0000000000048630        0x0 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+ .bss           0x0000000000048630        0x0 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+ *(COMMON)
+                0x0000000000048630                . = ALIGN (0x8)
+                0x0000000000048630                . = ALIGN (0x8)
+                0x0000000000048630                _end_bss = .
+                0x00000000000489a8                _global_pointer = MIN ((__SDATA_BEGIN__ + 0x800), MAX ((_start_data + 0x800), (_end_bss - 0x800)))
+                0x0000000000048630                _end = .
+                [!provide]                        PROVIDE (end = .)
+
+.heap           0x0000000000048630    0x3f9c0
+                0x0000000000048630                PROVIDE (__heap_start = .)
+                0x0000000000087ff0                PROVIDE (__heap_end = ALIGN ((((ORIGIN (DATA_MEM) + LENGTH (DATA_MEM)) - __heap_start) - 0xf), 0x10))
+                0x0000000000087ff0                . = __heap_end
+ *fill*         0x0000000000048630    0x3f9c0 
+
+.stack          0x0000000000048630    0x3f9c0
+                [!provide]                        PROVIDE (__stack_start = __heap_start)
+                0x0000000000087ff0                . = __heap_end
+ *fill*         0x0000000000048630    0x3f9c0 
+                0x0000000000087ff0                PROVIDE (_end_stack = .)
+OUTPUT(/home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.elf elf32-littleriscv)
+
+.comment        0x0000000000000000       0x22
+ .comment       0x0000000000000000       0x10 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+                                         0x11 (size before relaxing)
+ .comment       0x0000000000000010       0x11 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+ .comment       0x0000000000000010       0x12 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+                                         0x13 (size before relaxing)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+ .comment       0x0000000000000022       0x13 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+
+.riscv.attributes
+                0x0000000000000000       0x21
+ .riscv.attributes
+                0x0000000000000000       0x21 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/programs/mailbox_test/mailbox_test.o
+ .riscv.attributes
+                0x0000000000000021       0x21 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+ .riscv.attributes
+                0x0000000000000042       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-exit.o)
+ .riscv.attributes
+                0x0000000000000063       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-impure.o)
+ .riscv.attributes
+                0x0000000000000084       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .riscv.attributes
+                0x00000000000000a5       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-fini.o)
+ .riscv.attributes
+                0x00000000000000c6       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-atexit.o)
+ .riscv.attributes
+                0x00000000000000e7       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-__atexit.o)
+ .riscv.attributes
+                0x0000000000000108       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a(sys_exit.o)
+ .riscv.attributes
+                0x0000000000000129       0x21 /opt/triscv/lib/gcc/riscv32-unknown-elf/11.1.0/../../../../riscv32-unknown-elf/lib/libc.a(lib_a-errno.o)
+
+.debug_info     0x0000000000000000      0x150
+ .debug_info    0x0000000000000000      0x150 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+
+.debug_abbrev   0x0000000000000000       0xbe
+ .debug_abbrev  0x0000000000000000       0xbe /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+
+.debug_aranges  0x0000000000000000       0x30
+ .debug_aranges
+                0x0000000000000000       0x30 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+
+.debug_rnglists
+                0x0000000000000000       0x28
+ .debug_rnglists
+                0x0000000000000000       0x28 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+
+.debug_line     0x0000000000000000      0x2e3
+ .debug_line    0x0000000000000000      0x2e3 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+
+.debug_str      0x0000000000000000      0x140
+ .debug_str     0x0000000000000000      0x140 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                                        0x17d (size before relaxing)
+
+.debug_line_str
+                0x0000000000000000      0x1c2
+ .debug_line_str
+                0x0000000000000000      0x1c2 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
+                                        0x22b (size before relaxing)
+
+.debug_frame    0x0000000000000000       0x94
+ .debug_frame   0x0000000000000000       0x94 /home/sgeuser39/WORK_PS_Mohan/working_c32/zilla_32/VERIFICATION/firmware/bsp/libbsp-lib.a(zilla_startup.o)
